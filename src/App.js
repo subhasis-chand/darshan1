@@ -12,14 +12,7 @@ function App() {
         </p>
         <p id="demo">test after adding button script to script</p>
         <button id="installApp">Install</button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
       </header>
     </div>
   );
