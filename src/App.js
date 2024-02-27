@@ -40,6 +40,7 @@ function App() {
         </p>
         <p id="demo">test after adding button script to script</p>
         <div>pwa supprot: {supportsPWA ? 'yes' : 'no'}</div>
+        <div>button can hide</div>
         {supportsPWA &&
           <button
             className="link-button"
