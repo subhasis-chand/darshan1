@@ -8,10 +8,10 @@ function App() {
 
   useEffect(() => {
     const handler = e => {
-      e.preventDefault();
       console.log("we are being triggered :D");
       setSupportsPWA(true);
       setPromptInstall(e);
+      e.preventDefault();
     };
     window.addEventListener("beforeinstallprompt", handler);
 
@@ -25,9 +25,11 @@ function App() {
     }
     promptInstall.prompt();
   };
-  if (!supportsPWA) {
-    return null;
-  }
+  // if (!supportsPWA) {
+  //   return <div>App installed
+  //     <div>pwa supprot: {supportsPWA ? 'yes' : 'no'}</div>
+  //   </div>;
+  // }
 
   return (
     <div className="App">
@@ -37,16 +39,18 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p id="demo">test after adding button script to script</p>
-        <button
-          className="link-button"
-          id="setup_button"
-          aria-label="Install app"
-          title="Install app"
-          onClick={onClick}
-        >
-          Install component
-        </button>
-
+        <div>pwa supprot: {supportsPWA ? 'yes' : 'no'}</div>
+        {supportsPWA &&
+          <button
+            className="link-button"
+            id="setup_button"
+            aria-label="Install app"
+            title="Install app"
+            onClick={onClick}
+          >
+            Install component
+          </button>
+        }
       </header>
     </div>
   );
