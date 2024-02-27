@@ -10,6 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <p id="demo">test after adding button script to script</p>
         <button id="installApp">Install</button>
         <a
           className="App-link"
